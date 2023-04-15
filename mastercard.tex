@@ -164,7 +164,7 @@
     \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
     % Document parameters
     % Document title
-    \title{Using Random Forest Regression Model on the Mastercard's Stock Data Itself}
+    \title{Using Random Forest Regression Model on the Mastercard's Stock Data Itself}
     \author{Annie He}
     
     
@@ -711,7 +711,7 @@ charts and indicators to help interpret price moves. The goal when using
 indicators is to identify trading opportunities''. See
 \href{https://www.investopedia.com/terms/t/technicalindicator.asp}{here}
 for more information on technical indicators. The project will use
-50-day and 200-day moving averages and on-balance volume.
+15-day moving average and on-balance volume.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -908,16 +908,12 @@ R-squared:  1.0
 vs \texttt{prediction} graph, the graph forms into a perfect straight
 line that goes up, which means I've overfitted the data. In other words,
 I've created a model that tests well in sample, but has little
-predictive value. I simply used all the columns except for
-\texttt{Adj\ Close} for features and selected only \texttt{Adj\ Close}
-as the target, but the actual values between \texttt{open},
+predictive value. The actual values between \texttt{open},
 \texttt{close}, \texttt{high}, \texttt{low}, and \texttt{close} are very
 similar to \texttt{Adj\ Close}. Therefore, the model isn't able to make
 predicted values. It's worth noting that none of the features are
-contributing to the values for \texttt{Adj\ Close}. The
-\texttt{Adj\ Close} is simply the updated version of \texttt{close}
-values to reflect dividends and stock splits. The results will not make
-sense if one is not able to identify how features can possibly
+contributing to the values for \texttt{Adj\ Close}. The results will not
+make sense if one is not able to identify how features can possibly
 contribute to the values for a target.
 
     \hypertarget{takeaways}{%
@@ -932,6 +928,7 @@ hard to predict. An article published by the TIME magazine offered more
 insights into how diverse factors contribute to stock prices for listed
 companies. The link is
 \href{https://time.com/personal-finance/article/how-are-stock-prices-determined/}{here}.
+
 At the current time, Mastercard is very profitable, but there is a lot
 of fear concerning a possible economic turn down. This means the
 investor is using possible fear of the future to drive today's prices.
